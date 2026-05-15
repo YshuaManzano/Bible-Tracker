@@ -1,0 +1,88 @@
+{
+  "type": "AdaptiveCard",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "Container",
+      "style": "emphasis",
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "DAILY VERSE",
+          "size": "Small",
+          "weight": "Lighter",
+          "color": "Accent",
+          "spacing": "None"
+        },
+        {
+          "type": "TextBlock",
+          "text": "${verse}",
+          "wrap": true,
+          "size": "Medium",
+          "weight": "Bolder",
+          "spacing": "Small"
+        },
+        {
+          "type": "TextBlock",
+          "text": "\u2014 ${reference}",
+          "wrap": true,
+          "size": "Small",
+          "color": "Accent",
+          "horizontalAlignment": "Right",
+          "spacing": "Small"
+        }
+      ]
+    },
+    {
+      "type": "ColumnSet",
+      "spacing": "Small",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "\ud83d\udd25 ${streak}",
+              "size": "Large",
+              "weight": "Bolder"
+            },
+            {
+              "type": "TextBlock",
+              "text": "Day Streak",
+              "size": "Small",
+              "color": "Default",
+              "spacing": "None"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "\ud83d\udcd6 ${chapters}",
+              "size": "Large",
+              "weight": "Bolder"
+            },
+            {
+              "type": "TextBlock",
+              "text": "Chapters Read",
+              "size": "Small",
+              "color": "Default",
+              "spacing": "None"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.OpenUrl",
+      "title": "Open VerseTrack",
+      "url": "/?screen=home"
+    }
+  ]
+}

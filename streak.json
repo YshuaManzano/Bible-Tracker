@@ -1,0 +1,73 @@
+{
+  "type": "AdaptiveCard",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "VerseTrack",
+      "size": "Small",
+      "weight": "Lighter",
+      "color": "Accent"
+    },
+    {
+      "type": "ColumnSet",
+      "items": [
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "\ud83d\udd25",
+              "size": "ExtraLarge"
+            },
+            {
+              "type": "TextBlock",
+              "text": "${streak}",
+              "size": "ExtraLarge",
+              "weight": "Bolder",
+              "spacing": "None"
+            },
+            {
+              "type": "TextBlock",
+              "text": "Day Streak",
+              "size": "Small",
+              "spacing": "None"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "\ud83d\udcd6",
+              "size": "ExtraLarge"
+            },
+            {
+              "type": "TextBlock",
+              "text": "${chapters}",
+              "size": "ExtraLarge",
+              "weight": "Bolder",
+              "spacing": "None"
+            },
+            {
+              "type": "TextBlock",
+              "text": "Chapters Read",
+              "size": "Small",
+              "spacing": "None"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.OpenUrl",
+      "title": "Read Today",
+      "url": "/?screen=biblemap"
+    }
+  ]
+}
