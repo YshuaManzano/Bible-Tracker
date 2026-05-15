@@ -1,0 +1,175 @@
+{
+  "id": "com.versetrack.app",
+  "name": "VerseTrack",
+  "short_name": "VerseTrack",
+  "description": "Your daily Bible reading companion — track progress, join reading circles, and grow in faith.",
+  "start_url": "/",
+  "scope": "/",
+  "lang": "en",
+  "dir": "ltr",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "tabbed", "standalone", "minimal-ui"],
+  "background_color": "#0e0b08",
+  "theme_color": "#d4882a",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false,
+  "categories": ["lifestyle", "education", "books"],
+
+  "iarc_rating_id": "e84b072d-71b3-4d3e-86ae-31a8ce4e53b7",
+
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.versetrack.app",
+      "id": "com.versetrack.app"
+    },
+    {
+      "platform": "itunes",
+      "url": "https://apps.apple.com/app/versetrack/id0000000000"
+    },
+    {
+      "platform": "windows",
+      "url": "https://www.microsoft.com/store/apps/versetrack"
+    }
+  ],
+
+  "icons": [
+    { "src": "/icons/icon-72x72.png",          "sizes": "72x72",   "type": "image/png" },
+    { "src": "/icons/icon-96x96.png",          "sizes": "96x96",   "type": "image/png" },
+    { "src": "/icons/icon-128x128.png",        "sizes": "128x128", "type": "image/png" },
+    { "src": "/icons/icon-144x144.png",        "sizes": "144x144", "type": "image/png" },
+    { "src": "/icons/icon-152x152.png",        "sizes": "152x152", "type": "image/png" },
+    { "src": "/icons/icon-192x192.png",        "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-384x384.png",        "sizes": "384x384", "type": "image/png" },
+    { "src": "/icons/icon-512x512.png",        "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512-maskable.png",   "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+
+  "screenshots": [
+    {
+      "src": "/icons/screenshot-home.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Home — daily verse, streak and reading activity"
+    },
+    {
+      "src": "/icons/screenshot-biblemap.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Bible Map — track all 66 books"
+    },
+    {
+      "src": "/icons/screenshot-wide-home.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "VerseTrack on desktop — Home dashboard"
+    },
+    {
+      "src": "/icons/screenshot-wide-map.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "VerseTrack on desktop — Bible Map"
+    }
+  ],
+
+  "shortcuts": [
+    {
+      "name": "Bible Map",
+      "short_name": "Map",
+      "description": "See your reading progress across all 66 books",
+      "url": "/?screen=biblemap",
+      "icons": [{ "src": "/icons/icon-96x96.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Reading Circles",
+      "short_name": "Circles",
+      "description": "Read together with your group",
+      "url": "/?screen=circles",
+      "icons": [{ "src": "/icons/icon-96x96.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Reading Plans",
+      "short_name": "Plans",
+      "description": "View and manage your reading plans",
+      "url": "/?screen=plans",
+      "icons": [{ "src": "/icons/icon-96x96.png", "sizes": "96x96" }]
+    }
+  ],
+
+  "file_handlers": [
+    {
+      "action": "/?open=note",
+      "accept": {
+        "text/plain": [".txt"],
+        "text/markdown": [".md"]
+      },
+      "icons": [{ "src": "/icons/icon-192x192.png", "sizes": "192x192" }],
+      "launch_type": "single-client"
+    }
+  ],
+
+  "handle_links": "preferred",
+
+  "note_taking": {
+    "new_note_url": "/?screen=home&action=new-note"
+  },
+
+  "widgets": [
+    {
+      "name": "Daily Verse",
+      "short_name": "Daily Verse",
+      "description": "Shows today's Bible verse and your reading streak",
+      "tag": "daily-verse-widget",
+      "ms_ac_template": "/widgets/daily-verse.json",
+      "data": "/widgets/daily-verse-data.json",
+      "type": "application/json",
+      "screenshots": [
+        {
+          "src": "/icons/screenshot-home.png",
+          "sizes": "1080x1920",
+          "label": "Daily verse widget preview"
+        }
+      ],
+      "icons": [{ "src": "/icons/icon-192x192.png", "sizes": "192x192" }],
+      "backgrounds": [{ "src": "/icons/icon-512-maskable.png", "sizes": "512x512" }]
+    },
+    {
+      "name": "Reading Streak",
+      "short_name": "Streak",
+      "description": "Shows your current reading streak and chapters read",
+      "tag": "streak-widget",
+      "ms_ac_template": "/widgets/streak.json",
+      "data": "/widgets/streak-data.json",
+      "type": "application/json",
+      "icons": [{ "src": "/icons/icon-192x192.png", "sizes": "192x192" }]
+    }
+  ],
+
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+
+  "protocol_handlers": [
+    { "protocol": "web+versetrack", "url": "/?action=%s" }
+  ],
+
+  "share_target": {
+    "action": "/?share=true",
+    "method": "GET",
+    "params": { "title": "title", "text": "text", "url": "url" }
+  },
+
+  "launch_handler": {
+    "client_mode": ["focus-existing", "auto"]
+  },
+
+  "scope_extensions": [
+    { "origin": "https://versetrack.app" },
+    { "origin": "https://www.versetrack.app" },
+    { "origin": "https://api.versetrack.app" }
+  ]
+}
